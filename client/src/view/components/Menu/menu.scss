@@ -1,0 +1,14 @@
+.menu {
+  position: fixed;
+  top: 75px;
+  left: -100%;
+  background-color: #1a243a;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  transition: .5s;
+  z-index: 100;
+}
+.show{
+  left: 0;
+}

@@ -1,0 +1,47 @@
+{
+  "books": [
+    {
+      "genre": "Novel",
+      "name": "1984",
+      "description": "1984 is a dystopian novella by George Orwell published in 1949, which follows the life of Winston Smith, a low ranking member of 'the Party', who is frustrated by the omnipresent eyes of the party, and its ominous ruler Big Brother. 'Big Brother' controls every aspect of people's lives.",
+      "img": "https://productimages.worldofbooks.com/0141036141.jpg",
+      "author": "George Orwell",
+      "id": "3d2c4716-1241-462e-a5e7-55d892a79b40"
+    },
+    {
+      "img": "https://mysticbooks.org/thumbs/image/book/pride-and-prejudice.webp",
+      "genre": "Romance",
+      "name": "Pride and Prejudice",
+      "description": "When Elizabeth Bennet first meets eligible bachelor Fitzwilliam Darcy, she thinks him arrogant and conceited; he is indifferent to her good looks and lively mind. When she later discovers that Darcy has involved himself in the troubled relationship between his friend Bingley and her beloved sister Jane, she is determined to dislike him more than ever. In the sparkling comedy of manners that follows, Jane Austen shows the folly of judging by first impressions and superbly evokes the friendships, gossip and snobberies of provincial middle-class life.",
+      "id": "11b6b15e-77f0-4f6a-9b3b-78fd4d31596f",
+      "author": "Jane Austen",
+      "section": "books"
+    },
+    {
+      "genre": "Brothers",
+      "name": "Arc de Triumphe",
+      "description": "Erich Maria remarque",
+      "img": "https://images-na.ssl-images-amazon.com/images/I/81G2rxCp7IL.jpg",
+      "author": "wefwef",
+      "id": "e591ade1-63b7-4152-ab4e-2c4033b0c936"
+    }
+  ],
+  "authors": [
+    {
+      "genre": "Drama, war",
+      "name": "Erick Remarque",
+      "description": "Erich Maria Remarque[1] (born Erich Paul Remark; 22 June 1898 – 25 September 1970) was a German novelist. His landmark novel Im Westen nichts Neues (All Quiet on the Western Front) (1928), about the German military experience of World War I, was an international best-seller which created a new literary genre, and was adapted into a film in 1930.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Bundesarchiv_Bild_183-R04034%2C_Erich_Maria_Remarque_%28cropped%29.jpg/220px-Bundesarchiv_Bild_183-R04034%2C_Erich_Maria_Remarque_%28cropped%29.jpg",
+      "section": "authors",
+      "id": "3d2c4716-1241-462e-р3о9-55d892a79b40"
+    },
+    {
+      "name": "Jane Austen",
+      "description": "Jane Austen was an English novelist known primarily for her six major novels, which interpret, critique and comment upon the British landed gentry at the end of the 18th century. Austen's plots often explore the dependence of women on marriage in the pursuit of favourable social standing and economic security. Her works critique the novels of sensibility of the second half of the 18th century and are part of the transition to 19th-century literary realism.[2][b] Her use of biting irony, along with her realism, humour, and social commentary, have long earned her acclaim among critics, scholars, and popular audiences alike.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/CassandraAusten-JaneAusten%28c.1810%29_hires.jpg/200px-CassandraAusten-JaneAusten%28c.1810%29_hires.jpg",
+      "id": "11b6b15e-77f0-4f6a-6h7v-78fd4d31596f",
+      "genre": "Drama",
+      "section": "authors"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+@import "./src/view/assets/styles/variables";
+
+.book{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  font-family: 'Oswald', sans-serif;
+
+  &--btn-wrapper{
+    display: flex;
+    flex-direction: column;
+  }
+  &-header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  &-cover{
+    img{
+      width: 150px;
+    }
+  }
+  &-genre{
+    margin: 10px 0;
+  }
+  &-name{
+    font-size: 40px;
+  }
+  &-author{
+    margin-top: 10px;
+    color: #669999;
+  }
+  &-description{
+    margin-top: 10px;
+  }
+  &-update-form{
+    margin-top: 20px;
+  }
+}
+@media (min-width: $min-desktop) {
+  .book-header{
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .book-cover{
+    margin-right: 30px;
+  }
+}

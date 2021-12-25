@@ -1,0 +1,36 @@
+.book-item{
+  margin: 10px 0px;
+  padding: 20px 0px;
+  border-top: 1px solid gray;
+  font-family: 'Oswald', sans-serif;
+  display: flex;
+  &:hover{
+    background-color: #c2d6d6;
+  }
+  &__index{
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    margin-right: 20px;
+  }
+  &-image{
+    margin-right: 20px;
+  }
+  &__img{
+    width: 150px;
+  }
+  &__info{
+    &--item{
+      margin: 10px 0px;
+    }
+
+    &--genre{
+      background-color: #669999;
+      border-radius: 30px;
+      padding: 5px 8px;
+    }
+    &--name{
+      font-size: 21px;
+      line-height: 28px;
+    }
+  }
+}
