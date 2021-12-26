@@ -6,17 +6,18 @@ import Book from "../pages/Book/Book";
 import {useDispatch, useSelector} from "react-redux";
 import {booksOperations, booksSelectors} from "../../redux/features/books";
 import AddABook from "../pages/AddABook/AddABook";
-import {authorsOperations} from "../../redux/features/authors";
+import {authorsOperations, authorsSelectors} from "../../redux/features/authors";
 import Author from "../pages/Author/Author";
 import AddAnAuthor from "../pages/AddAnAuthor/AddAnAuthor";
 
 const AppRoutes = () => {
     const dispatch = useDispatch();
     const books = useSelector(booksSelectors.books);
+    const authors = useSelector(authorsSelectors.authors);
     useEffect(() => {
         dispatch(booksOperations.getData())
         dispatch(authorsOperations.getData())
-    }, [books.length]);
+    }, [books.length, authors.length]);
 
     return (
             <Switch>

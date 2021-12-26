@@ -1,6 +1,6 @@
 import actions from "./actions";
 
-const { getAuthors, addAuthor, deleteAuthor,updateAuthor } = actions;
+const {getAuthors, addAuthor, deleteAuthor, updateAuthor} = actions;
 
 const getData = () => (dispatch) => {
     fetch('http://localhost:8000/authors')
@@ -29,13 +29,19 @@ const addedAuthor = (author) => (dispatch) => {
         .then(dispatch(addAuthor(author)))
 }
 
-const updatedAuthor = (updAuthor,id) => (dispatch,getState) => {
-    const { authors } = getState();
+const updatedAuthor = (updAuthor, id) => (dispatch, getState) => {
+    const {authors} = getState();
     const updatedState = authors.map(author =>
         author.id === id
-        ?
-        {...author, img: updAuthor.img, genre: updAuthor.genre, name: updAuthor.name, description: updAuthor.description}
-        :
+            ?
+            {
+                ...author,
+                img: updAuthor.img,
+                genre: updAuthor.genre,
+                name: updAuthor.name,
+                description: updAuthor.description
+            }
+            :
             author
     )
     fetch(`http://localhost:8000/authors/${id}`, {
@@ -53,7 +59,7 @@ const operations = {
     getData,
     removeAuthor,
     addedAuthor,
-    updatedAuthor
+    updatedAuthor,
 };
 
 export default operations;

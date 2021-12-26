@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './book.scss';
 import {useDispatch, useSelector} from "react-redux";
 import {useHistory, useParams} from "react-router-dom";
@@ -7,13 +7,12 @@ import {authorsOperations, authorsSelectors} from "../../../redux/features/autho
 import UpdateAuthorForm from "../../components/UpdateAuthorForm/UpdateAuthorForm";
 
 const Author = () => {
+    const dispatch = useDispatch();
     const [isUpdateEnabled, setIsUpdateEnabled] = useState(false);
     const { authorId } = useParams();
     const history = useHistory();
     const authors = useSelector(authorsSelectors.authors);
     const currentAuthor = authors.find(author => author.id === authorId);
-
-    const dispatch = useDispatch();
 
     const handleDelete = () => {
         dispatch(authorsOperations.removeAuthor(authorId))

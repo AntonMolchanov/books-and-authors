@@ -6,7 +6,8 @@
       "description": "1984 is a dystopian novella by George Orwell published in 1949, which follows the life of Winston Smith, a low ranking member of 'the Party', who is frustrated by the omnipresent eyes of the party, and its ominous ruler Big Brother. 'Big Brother' controls every aspect of people's lives.",
       "img": "https://productimages.worldofbooks.com/0141036141.jpg",
       "author": "George Orwell",
-      "id": "3d2c4716-1241-462e-a5e7-55d892a79b40"
+      "id": "3d2c4716-1241-462e-a5e7-55d892a79b40",
+      "section": "books"
     },
     {
       "img": "https://mysticbooks.org/thumbs/image/book/pride-and-prejudice.webp",
@@ -18,18 +19,64 @@
       "section": "books"
     },
     {
-      "genre": "Brothers",
+      "genre": "War novel",
       "name": "Arc de Triumphe",
-      "description": "Erich Maria remarque",
+      "description": "Triumph (German: Arc de Triomphe) is a 1945 novel by Erich Maria Remarque about stateless refugees in Paris before World War II. Written during his exile in the United States (1939–1948), it was his second worldwide bestseller, after All Quiet on the Western Front.[1] It was made into a feature film starring Ingrid Bergman and Charles Boyer in 1948 and into a television film starring Anthony Hopkins and Lesley-Anne Down in 1984.",
       "img": "https://images-na.ssl-images-amazon.com/images/I/81G2rxCp7IL.jpg",
-      "author": "wefwef",
-      "id": "e591ade1-63b7-4152-ab4e-2c4033b0c936"
+      "author": "Erich Maria Remarque",
+      "id": "e591ade1-63b7-4152-ab4e-2c4033b0c936",
+      "section": "books"
+    },
+    {
+      "author": "William Makepeace",
+      "name": "Vanity fair",
+      "genre": "Novel",
+      "description": "The story is framed by its preface[14] and coda[15] as a puppet show taking place at a fair; the cover illustration of the serial instalments was not of the characters but of a troupe of comic actors[8] at Speakers' Corner in Hyde Park.[16] The narrator, variously a show manager[14] or writer,[17] appears at times within the work itself and is somewhat unreliable,[18][b] repeating a tale of gossip at second or third hand.[20]",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Vanity_Fair_01_cover.jpg/440px-Vanity_Fair_01_cover.jpg",
+      "id": "4bffcac1-0b15-470d-900c-8cd1dfe659ee",
+      "section": "books"
+    },
+    {
+      "author": "William Makepeace",
+      "name": "The Luck of Barry Lyndon",
+      "genre": "Novel",
+      "description": "Redmond Barry of Ballybarry, born to a genteel but ruined Irish family, fancies himself a gentleman. At the prompting of his mother, he learns what he can of courtly manners and swordplay, but fails at more scholarly subjects like Latin. He is a hot-tempered, passionate lad, and falls madly in love with his cousin, Nora. As she is a spinster a few years older than Redmond, she is seeking a prospect with more ready cash to pay family debts.",
+      "img": "data:image/jpeg;base64,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",
+      "id": "d15eae96-13bc-4ed6-85d2-5e0f166dd8ec",
+      "section": "books"
+    },
+    {
+      "author": "Erich Maria Remarque",
+      "name": "The Dream Room",
+      "genre": "Novel",
+      "description": "Die Traumbude) was Erich Maria Remarque's first novel, published under the name Erich Remark. He started writing it at the age of sixteen and completed it after his service in World War I, but it was not published until 1920.",
+      "img": "https://upload.wikimedia.org/wikipedia/en/3/38/DieTraumbudeRemarque.jpg",
+      "id": "80cce16f-62d3-481a-9810-7cc76e125fde",
+      "section": "books"
+    },
+    {
+      "author": "George Orwell",
+      "name": "Burmese Days",
+      "genre": "Novel",
+      "description": "Burmese Days is the first novel by English writer George Orwell, published in 1934. Set in British Burma during the waning days of empire, when Burma was ruled from Delhi as part of British India, the novel serves as \"a portrait of the dark side of the British Raj.\" At the centre of the novel is John Flory, \"the lone and lacking individual trapped within a bigger system that is undermining the better side of human nature.\"[1] The novel describes \"both indigenous corruption and imperial bigotry\" in a society where, \"after all, natives were natives—interesting, no doubt, but finally...an inferior people\".[2]",
+      "img": "https://upload.wikimedia.org/wikipedia/en/a/a3/Burmese_days.jpg",
+      "id": "658c077b-f65c-42ba-800c-daa36d22a100",
+      "section": "books"
+    },
+    {
+      "author": "Jane Austen",
+      "name": "Sense and Sensibility",
+      "genre": "Romance novel",
+      "description": "Sensibility is a novel by Jane Austen, published in 1811. It was published anonymously; By A Lady appears on the title page where the author's name might have been. It tells the story of the Dashwood sisters, Elinor (age 19) and Marianne (age 16½) as they come of age. They have an older half-brother, John, and a younger sister, Margaret (age 13).",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/SenseAndSensibilityTitlePage.jpg/440px-SenseAndSensibilityTitlePage.jpg",
+      "id": "a17565fc-c2e1-41d5-8f07-6b7e2f5ece4f",
+      "section": "books"
     }
   ],
   "authors": [
     {
       "genre": "Drama, war",
-      "name": "Erick Remarque",
+      "name": "Erich Maria Remarque",
       "description": "Erich Maria Remarque[1] (born Erich Paul Remark; 22 June 1898 – 25 September 1970) was a German novelist. His landmark novel Im Westen nichts Neues (All Quiet on the Western Front) (1928), about the German military experience of World War I, was an international best-seller which created a new literary genre, and was adapted into a film in 1930.",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Bundesarchiv_Bild_183-R04034%2C_Erich_Maria_Remarque_%28cropped%29.jpg/220px-Bundesarchiv_Bild_183-R04034%2C_Erich_Maria_Remarque_%28cropped%29.jpg",
       "section": "authors",
@@ -41,6 +88,22 @@
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/CassandraAusten-JaneAusten%28c.1810%29_hires.jpg/200px-CassandraAusten-JaneAusten%28c.1810%29_hires.jpg",
       "id": "11b6b15e-77f0-4f6a-6h7v-78fd4d31596f",
       "genre": "Drama",
+      "section": "authors"
+    },
+    {
+      "name": "William Makepeace",
+      "genre": "Novel",
+      "description": "William Makepeace was a British novelist, author and illustrator. He is known for his satirical works, particularly his 1848 novel Vanity Fair, a panoramic portrait of British society, and the 1844 novel The Luck of Barry Lyndon, which was adapted for a 1975 film by Stanley Kubrick.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/William_Makepeace_Thackeray_by_Jesse_Harrison_Whitehurst-crop.jpg/440px-William_Makepeace_Thackeray_by_Jesse_Harrison_Whitehurst-crop.jpg",
+      "id": "a18ba860-b35f-4e71-9773-b97c29721366",
+      "section": "authors"
+    },
+    {
+      "name": "George Orwell",
+      "genre": "Essay, Novel",
+      "description": "January 1950) known by his pen name George Orwell, was an English novelist, essayist, journalist and critic.[1] His work is characterised by lucid prose, biting social criticism, total opposition to totalitarianism, and outspoken support of democratic socialism.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/George_Orwell_press_photo.jpg/440px-George_Orwell_press_photo.jpg",
+      "id": "2d12dfd4-a279-472d-bc6f-91f5ad4c08a5",
       "section": "authors"
     }
   ]

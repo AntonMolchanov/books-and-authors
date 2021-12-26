@@ -4,6 +4,7 @@ import './header.scss';
 import icons from "../../assets/images/icons";
 import Menu from "../Menu/Menu";
 import useWindowSize from "../../hooks/useWindowSize";
+import {Link} from "react-router-dom";
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,7 +25,9 @@ const Header = () => {
         <div className="header">
             <div className="wrapper header-container">
                 {!isDesktop && <Hamburger toggled={isOpen} toggle={toggleMenu}/>}
-                <img src={icons.logo} alt="logo"/>
+                <Link to="/books">
+                    <img src={icons.logo} alt="logo"/>
+                </Link>
                 <Menu
                     open={isMenuOpen}
                     toggle={toggleMenu}
