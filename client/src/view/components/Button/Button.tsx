@@ -1,7 +1,12 @@
-import React from 'react';
+import React, {FC} from 'react';
 import './button.scss';
 
-const Button = ({callback,text}) => {
+interface IButtonProps {
+    callback?: () => void,
+    text: string
+}
+
+const Button: FC<IButtonProps> = ({callback,text}) => {
     return (
         <button
             className="custom-btn"

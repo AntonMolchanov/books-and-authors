@@ -8,7 +8,7 @@ import UpdateBookForm from "../../components/UpdateBookForm/UpdateBookForm";
 
 const Book = () => {
     const [isUpdateEnabled, setIsUpdateEnabled] = useState(false);
-    const {bookId} = useParams();
+    const { bookId } = useParams<{ bookId: string }>();
     const history = useHistory();
     const books = useSelector(booksSelectors.books)
     const currentBook = books.find(book => book.id === bookId);
@@ -64,6 +64,7 @@ const Book = () => {
                                 genre={currentBook.genre}
                                 id={bookId}
                                 author={currentBook.author}
+                                section={currentBook.section}
                             />
                     }
                 </div>

@@ -15,19 +15,19 @@ const AddAuthor = () => {
 
     const id = uuidv4();
 
-    const handleName = (e) => {
-        setName(e.target.value)
+    const handleName = (e: React.FormEvent<HTMLInputElement>) => {
+        setName((e.target as HTMLInputElement).value)
     }
-    const handleDescription = (e) => {
-        setDescription(e.target.value)
+    const handleDescription = (e: React.FormEvent<HTMLInputElement>) => {
+        setDescription((e.target as HTMLInputElement).value)
     }
-    const handleImage = (e) => {
-        setImg(e.target.value)
+    const handleImage = (e: React.FormEvent<HTMLInputElement>) => {
+        setImg((e.target as HTMLInputElement).value)
     }
-    const handleGenre = (e) => {
-        setGenre(e.target.value)
+    const handleGenre = (e: React.FormEvent<HTMLInputElement>) => {
+        setGenre((e.target as HTMLInputElement).value)
     }
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: React.SyntheticEvent) => {
         e.preventDefault()
 
         if (name && description && genre){

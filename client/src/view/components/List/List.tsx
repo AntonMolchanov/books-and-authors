@@ -1,8 +1,12 @@
-import React from 'react';
-import ListItem from "../ListItem/ListItem";
+import React, {FC} from 'react';
+import ListItem, {IListItem} from "../ListItem/ListItem";
 import './list.scss';
 
-const List = ({list}) => {
+interface IList {
+    list: IListItem[]
+}
+
+const List: FC<IList> = ({list}) => {
     return (
         <div className="wrapper books-list">
             {list.map((listItem, index) => {

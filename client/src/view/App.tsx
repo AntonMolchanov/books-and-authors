@@ -1,16 +1,13 @@
 import './assets/styles/App.scss';
 import Header from "./components/Header/Header";
 import AppRoutes from "./routes/AppRoutes";
-import {useEffect} from "react";
-import {useDispatch} from "react-redux";
-import {booksOperations} from "../redux/features/books";
+import {FC} from "react";
 
-function App() {
-
+const App: FC = () => {
     return (
         <div className="App">
             <Header/>
-                <AppRoutes/>
+            <AppRoutes/>
         </div>
     );
 }

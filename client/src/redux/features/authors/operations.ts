@@ -1,14 +1,16 @@
 import actions from "./actions";
+import {Dispatch} from "redux";
+import {IAuthor} from "./types/types";
 
 const {getAuthors, addAuthor, deleteAuthor, updateAuthor} = actions;
 
-const getData = () => (dispatch) => {
+const getData = () => (dispatch: Dispatch) => {
     fetch('http://localhost:8000/authors')
         .then(res => res.json())
         .then(data => dispatch(getAuthors(data)))
 };
 
-const removeAuthor = (id) => (dispatch) => {
+const removeAuthor = (id: string) => (dispatch: Dispatch) => {
     fetch(`http://localhost:8000/authors/${id}`, {
         method: 'DELETE',
     })
@@ -17,7 +19,7 @@ const removeAuthor = (id) => (dispatch) => {
         .then(data => dispatch(deleteAuthor(data)));
 }
 
-const addedAuthor = (author) => (dispatch) => {
+const addedAuthor = (author: IAuthor) => (dispatch: any) => {
     fetch('http://localhost:8000/authors', {
         method: 'POST',
         headers: {
@@ -29,9 +31,9 @@ const addedAuthor = (author) => (dispatch) => {
         .then(dispatch(addAuthor(author)))
 }
 
-const updatedAuthor = (updAuthor, id) => (dispatch, getState) => {
+const updatedAuthor = (updAuthor: IAuthor, id: string) => (dispatch: any, getState: any) => {
     const {authors} = getState();
-    const updatedState = authors.map(author =>
+    const updatedState = authors.map((author: IAuthor) =>
         author.id === id
             ?
             {

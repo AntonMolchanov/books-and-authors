@@ -1,22 +1,23 @@
 import types from "./types";
+import {ActionTypes} from "./types/types";
 
-const {GOT_BOOKS, ADDED_BOOK, DELETED_BOOK, UPDATED_BOOK} = types;
+const {GOT_AUTHORS, ADDED_AUTHOR, DELETED_AUTHOR, UPDATED_AUTHOR} = types;
 
 
-const booksReducer = (state = [], action) => {
+const authorsReducer = (state = [], action: ActionTypes) => {
     const {type, payload} = action;
 
     switch (type) {
-        case GOT_BOOKS: {
+        case GOT_AUTHORS: {
             return payload;
         }
-        case DELETED_BOOK: {
+        case DELETED_AUTHOR: {
             return payload;
         }
-        case ADDED_BOOK: {
+        case ADDED_AUTHOR: {
             return [...state, payload];
         }
-        case UPDATED_BOOK: {
+        case UPDATED_AUTHOR: {
             return payload;
         }
         default: {
@@ -26,5 +27,5 @@ const booksReducer = (state = [], action) => {
 }
 
 export default {
-    books: booksReducer
+    authors: authorsReducer
 }

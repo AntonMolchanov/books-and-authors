@@ -1,14 +1,15 @@
 import actions from "./actions";
+import {IBook} from "./types/types";
 
 const { getBooks, addBook, deleteBook,updatedBook } = actions;
 
-const getData = () => (dispatch) => {
+const getData = () => (dispatch: any) => {
     fetch('http://localhost:8000/books')
         .then(res => res.json())
         .then(data => dispatch(getBooks(data)))
 };
 
-const removeBook = (id) => (dispatch) => {
+const removeBook = (id: string) => (dispatch: any) => {
     fetch(`http://localhost:8000/books/${id}`, {
         method: 'DELETE',
     })
@@ -17,7 +18,7 @@ const removeBook = (id) => (dispatch) => {
         .then(data => dispatch(deleteBook(data)));
 }
 
-const addedBook = (book) => (dispatch) => {
+const addedBook = (book: IBook) => (dispatch: any) => {
     fetch('http://localhost:8000/books', {
         method: 'POST',
         headers: {
@@ -29,9 +30,9 @@ const addedBook = (book) => (dispatch) => {
         .then(dispatch(addBook(book)))
 }
 
-const updateBook = (updBook,id) => (dispatch,getState) => {
+const updateBook = (updBook: IBook,id: string) => (dispatch: any,getState: any) => {
     const { books } = getState();
-    const updatedState = books.map(book =>
+    const updatedState = books.map((book: IBook) =>
     book.id === id
         ?
         {...book, img: updBook.img, genre: updBook.genre, name: updBook.name, description: updBook.description}

@@ -1,3 +1,4 @@
+
 const GOT_AUTHORS = 'authors/gotAuthors';
 const DELETED_AUTHOR = 'authors/deletedAuthor';
 const ADDED_AUTHOR = 'authors/addedAuthor';

@@ -1,18 +1,35 @@
-import React, {useEffect, useState} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import './book.scss';
 import {useDispatch, useSelector} from "react-redux";
 import {useHistory, useParams} from "react-router-dom";
 import Button from "../../components/Button/Button";
 import {authorsOperations, authorsSelectors} from "../../../redux/features/authors";
 import UpdateAuthorForm from "../../components/UpdateAuthorForm/UpdateAuthorForm";
+import {IAuthor} from "../../../redux/features/authors/types/types";
+import {booksOperations, booksSelectors} from "../../../redux/features/books";
+import List from "../../components/List/List";
 
-const Author = () => {
+type idParams = {
+    authorId: string;
+}
+
+const Author: FC = () => {
     const dispatch = useDispatch();
     const [isUpdateEnabled, setIsUpdateEnabled] = useState(false);
-    const { authorId } = useParams();
+    const { authorId } = useParams<idParams>();
     const history = useHistory();
     const authors = useSelector(authorsSelectors.authors);
-    const currentAuthor = authors.find(author => author.id === authorId);
+    const currentAuthor: IAuthor | undefined = authors.find(author => author.id === authorId);
+    const books = useSelector(booksSelectors.books);
+    const author: IAuthor | undefined = authors.find(author => author.id === authorId);
+    const authorsBooks = books.filter(book => book.author === author?.name)
+
+    useEffect(() => {
+        dispatch(booksOperations.getData())
+        if (!author){
+            dispatch(authorsOperations.getData())
+        }
+    }, [])
 
     const handleDelete = () => {
         dispatch(authorsOperations.removeAuthor(authorId))
@@ -63,7 +80,11 @@ const Author = () => {
                             img={currentAuthor.img}
                             genre={currentAuthor.genre}
                             id={authorId}
+                            section="authors"
                         />
+                    }
+                    {
+                        authorsBooks && <List list={authorsBooks}/>
                     }
                 </div>
             }

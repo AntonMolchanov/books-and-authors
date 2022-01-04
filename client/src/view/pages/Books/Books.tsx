@@ -1,12 +1,16 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './books.scss';
 import List from "../../components/List/List";
-import {useSelector} from "react-redux";
-import {booksSelectors} from "../../../redux/features/books";
+import {useDispatch, useSelector} from "react-redux";
+import {booksOperations, booksSelectors} from "../../../redux/features/books";
 import {Link} from "react-router-dom";
 
 const Books = () => {
+    const dispatch = useDispatch();
     const books = useSelector(booksSelectors.books);
+    useEffect(() => {
+        dispatch(booksOperations.getData())
+    }, [books.length]);
 
     return (
         <>

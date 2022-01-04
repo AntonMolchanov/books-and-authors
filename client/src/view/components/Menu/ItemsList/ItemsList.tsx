@@ -1,9 +1,13 @@
-import React from 'react';
+import React, {FC} from 'react';
 import menuItems from "../menuItems";
 import MenuItem from "../MenuItem/MenuItem";
 import './menuItems.scss';
 
-const ItemsList = ({toggle}) => {
+interface ItemsList {
+    toggle: () => void
+}
+
+const ItemsList: FC<ItemsList> = ({toggle}) => {
     return (
         <ul className="menu__container">
             {menuItems.map(item => {

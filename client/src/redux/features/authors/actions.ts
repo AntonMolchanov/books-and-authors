@@ -1,42 +1,43 @@
 import types from "./types";
+import {
+    ActionTypeAddAuthor,
+    ActionTypeDeleteAuthor,
+    ActionTypeGetAuthors,
+    ActionTypeUpdateAuthor,
+    IAuthor
+} from "./types/types";
 
 const {
     GOT_AUTHORS,
     ADDED_AUTHOR,
     DELETED_AUTHOR,
     UPDATED_AUTHOR,
-    GOT_RELATED_BOOKS,
 } = types;
 
-const getAuthors = (authors) => ({
+const getAuthors = (authors: IAuthor[]): ActionTypeGetAuthors => ({
     type: GOT_AUTHORS,
     payload: authors
 });
 
-const deleteAuthor = (updatedList) => ({
+const deleteAuthor = (updatedList: IAuthor[]): ActionTypeDeleteAuthor => ({
     type: DELETED_AUTHOR,
     payload: updatedList
 })
 
-const addAuthor = (author) => ({
+const addAuthor = (author: IAuthor): ActionTypeAddAuthor => ({
     type: ADDED_AUTHOR,
     payload: author
 })
-const updateAuthor = (updAuthor) => ({
+const updateAuthor = (updAuthor: IAuthor): ActionTypeUpdateAuthor => ({
     type: UPDATED_AUTHOR,
     payload: updAuthor
 })
 
-const getRelatedBooks = (books) => ({
-    type: GOT_RELATED_BOOKS,
-    payload: books,
-})
 const actions = {
     getAuthors,
     addAuthor,
     deleteAuthor,
     updateAuthor,
-    getRelatedBooks
 };
 
 export default actions;

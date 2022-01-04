@@ -1,10 +1,12 @@
-import React, {useState} from 'react';
+import React, {FC, useState} from 'react';
 import {useHistory} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import './AddABook.scss';
-import { v4 as uuidv4 } from 'uuid';
+import {v4 as uuidv4} from 'uuid';
+
 import {booksOperations} from "../../../redux/features/books";
-const AddABook = () => {
+
+const AddABook: FC = () => {
     const history = useHistory()
     const dispatch = useDispatch()
 
@@ -20,22 +22,22 @@ const AddABook = () => {
     const [img, setImg] = useState('');
 
     const id = uuidv4();
-    const handleAuthor = (e) => {
-        setAuthor(e.target.value)
+    const handleAuthor = (e: React.FormEvent<HTMLInputElement>) => {
+        setAuthor((e.target as HTMLInputElement).value)
     }
-    const handleName = (e) => {
-        setName(e.target.value)
+    const handleName = (e: React.FormEvent<HTMLInputElement>) => {
+        setName((e.target as HTMLInputElement).value)
     }
-    const handleDescription = (e) => {
-        setDescription(e.target.value)
+    const handleDescription = (e: React.FormEvent<HTMLInputElement>) => {
+        setDescription((e.target as HTMLInputElement).value)
     }
-    const handleImage = (e) => {
-        setImg(e.target.value)
+    const handleImage = (e: React.FormEvent<HTMLInputElement>) => {
+        setImg((e.target as HTMLInputElement).value)
     }
-    const handleGenre = (e) => {
-        setGenre(e.target.value)
+    const handleGenre = (e: React.FormEvent<HTMLInputElement>) => {
+        setGenre((e.target as HTMLInputElement).value)
     }
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: React.SyntheticEvent) => {
         e.preventDefault()
         setAuthorError(false)
         setNameError(false)

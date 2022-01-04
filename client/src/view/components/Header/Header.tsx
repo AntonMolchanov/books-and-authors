@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import {Squeeze as Hamburger} from 'hamburger-react';
 import './header.scss';
 import icons from "../../assets/images/icons";
@@ -6,11 +6,11 @@ import Menu from "../Menu/Menu";
 import useWindowSize from "../../hooks/useWindowSize";
 import {Link} from "react-router-dom";
 
-const Header = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isOpen, setOpen] = useState(false);
+const Header: FC = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+    const [isOpen, setOpen] = useState<boolean>(false);
     const sizes = useWindowSize()
-    const [isDesktop, setIsDesktop] = useState(sizes.width >= 768);
+    const [isDesktop, setIsDesktop] = useState<boolean>(sizes.width >= 768);
 
     useEffect(() => {
         setIsDesktop(sizes.width >= 768)

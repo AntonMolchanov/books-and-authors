@@ -1,37 +1,39 @@
-import React, {useState} from 'react';
+import React, {FC, FormEventHandler, useState} from 'react';
 import Button from "../Button/Button";
-import {booksOperations} from "../../../redux/features/books";
 import {useDispatch} from "react-redux";
+import {authorsOperations} from "../../../redux/features/authors";
+import {IAuthor} from "../../../redux/features/authors/types/types";
 
-const UpdateBookForm = ({genre,name,description,img, id,author}) => {
+
+const UpdateAuthorForm: FC<IAuthor> = ({genre,name,description,img, id}) => {
     const dispatch = useDispatch();
-    const [isUpdateEnabled, setIsUpdateEnabled] = useState(false);
     const [updGenre,setUpdGenre] = useState(genre);
     const [updName,setUpdName] = useState(name);
     const [updDescription,setUpdDescription] = useState(description);
     const [updImg,setUpdImg] = useState(img);
 
-    const handleName = (e) => {
-        setUpdName(e.target.value)
+    const handleName = (e: React.FormEvent<HTMLInputElement>):void => {
+        setUpdName((e.target as HTMLInputElement).value)
     }
-    const handleDescription = (e) => {
-        setUpdDescription(e.target.value)
+    const handleDescription = (e: React.FormEvent<HTMLInputElement>):void => {
+        setUpdDescription((e.target as HTMLInputElement).value)
     }
-    const handleImage = (e) => {
-        setUpdImg(e.target.value)
+    const handleImage = (e: React.FormEvent<HTMLInputElement>):void => {
+        setUpdImg((e.target as HTMLInputElement).value)
     }
-    const handleGenre = (e) => {
-        setUpdGenre(e.target.value)
+    const handleGenre = (e: React.FormEvent<HTMLInputElement>):void => {
+        setUpdGenre((e.target as HTMLInputElement).value)
     }
-    const handleSubmit = (e) => {
-        e.preventDefault()
+    const handleSubmit = (event: React.SyntheticEvent):void => {
+        event.preventDefault()
         if (updGenre && updName && updDescription && updImg){
-            dispatch(booksOperations.updateBook({
+            dispatch(authorsOperations.updatedAuthor({
                 genre: updGenre,
                 name: updName,
                 description: updDescription,
                 img: updImg,
-                author
+                section: 'authors',
+                id: id
             }, id));
         }
     }
@@ -48,4 +50,4 @@ const UpdateBookForm = ({genre,name,description,img, id,author}) => {
     );
 };
 
-export default UpdateBookForm;
+export default UpdateAuthorForm;

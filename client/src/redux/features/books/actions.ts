@@ -1,4 +1,5 @@
 import types from "./types";
+import {IBook} from "./types/types";
 
 const {
     GOT_BOOKS,
@@ -7,21 +8,21 @@ const {
     UPDATED_BOOK,
 } = types;
 
-const getBooks = (books) => ({
+const getBooks = (books: IBook[]) => ({
     type: GOT_BOOKS,
     payload: books
 });
 
-const deleteBook = (updatedList) => ({
+const deleteBook = (updatedList: IBook[]) => ({
     type: DELETED_BOOK,
     payload: updatedList
 })
 
-const addBook = (book) => ({
+const addBook = (book: IBook) => ({
     type: ADDED_BOOK,
     payload: book
 })
-const updatedBook = (updBook) => ({
+const updatedBook = (updBook: IBook) => ({
     type: UPDATED_BOOK,
     payload: updBook
 })
